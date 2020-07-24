@@ -12,7 +12,7 @@ echo $page;
 		<div class="nav_and_logo_container">
 			<div class="hidden_logo_container"><img class="hidden_logo" src="https://i.imgur.com/3MTQzk0.png"></div>
 			<ul class="nav_container" id="buttons_container">
-				<li class="nav_items nav_buttons"><a class="button_link" <?php if ($page =="index.php") {?>
+				<li class="nav_items nav_buttons"><a class="button_link" <?php if ($page =="/index.php") {?>
  class="active" <?php } ?> href="#">ACCUEIL</a></li>
 				<li class="nav_items nav_buttons"><a class="button_link" <?php if ($page =="index.php") {?>
  class="active" <?php } ?> href="#">GAMME</a></li>
