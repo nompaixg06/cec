@@ -17,13 +17,3 @@
 		</div>
 	</div>
 	</header>
-	<script>
-    $(document).ready(function() {
-        var url = window.location; 
-        var element = $('ul.nav_container').filter(function() {
-        return this.href == url || url.href.indexOf(this.href) == 0; }).parent().addClass('active');
-        if (element.is('a')) { 
-             element.addClass('active')
-         }
-    });
-    </script>
