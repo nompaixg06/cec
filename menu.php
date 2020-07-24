@@ -11,12 +11,21 @@ echo $page;
 		</div>
 		<div class="nav_and_logo_container">
 			<div class="hidden_logo_container"><img class="hidden_logo" src="https://i.imgur.com/3MTQzk0.png"></div>
+			<?php
+			function active($currect_page){
+			$url_array =  explode('/', $_SERVER['REQUEST_URI']) ;
+			$url = end($url_array);  
+			if($currect_page == $url){
+				echo 'active'; //class name in css 
+			} 
+			}
+			?>
 			<ul class="nav_container" id="buttons_container">
-				<li class="nav_items nav_buttons"><a class="button_link" href="#" <?php if($page=="index.php"):?>class="active"<?php endif;?>>ACCUEIL</a></li>
-				<li class="nav_items nav_buttons"><a class="button_link" href="#" <?php if($page=="gamme.php") echo'class="active"'; ?>>GAMME</a></li>
+				<li class="nav_items nav_buttons"><a class="button_link" href="#">ACCUEIL</a></li>
+				<li class="nav_items nav_buttons"><a class="button_link" href="#">GAMME</a></li>
 				<li class="nav_items nav_logo"><img class="logo" src="https://i.imgur.com/3MTQzk0.png"></li>
-				<li class="nav_items nav_buttons"><a class="button_link" href="#" <?php if($page=="devis.php") echo'class="active"'; ?>>DEVIS</a></li>
-				<li class="nav_items nav_buttons"><a class="button_link" href="#" <?php if($page=="index.php") echo'class="active"'; ?>>CONTACT</a></li>
+				<li class="nav_items nav_buttons"><a class="button_link" href="#">DEVIS</a></li>
+				<li class="nav_items nav_buttons"><a class="button_link" href="#">CONTACT</a></li>
 			</ul>
 		</div>
 	</div>
