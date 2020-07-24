@@ -15,7 +15,7 @@ echo $page;
 				<li class="nav_items nav_buttons active" <?php if($page=="/index.php") echo'class="active"'; ?>><a class="button_link" href="#">ACCUEIL</a></li>
 				<li class="nav_items nav_buttons" <?php if($page=="/gamme.php") echo'class="active"'; ?>><a class="button_link" href="#">GAMME</a></li>
 				<li class="nav_items nav_logo"><img class="logo" src="https://i.imgur.com/3MTQzk0.png"></li>
-				<li class="nav_items nav_buttons" <?php if($page=="/devis.php") echo'class="active"'; ?>><a class="button_link" href="#">DEVIS</a></li>
+				<li class="nav_items nav_buttons" <?php if($page=="/devis.php") echo'class="active"'; ?>><a class="button_link active" href="#">DEVIS</a></li>
 				<li class="nav_items nav_buttons" <?php if($page=="/index.php") echo'class="active"'; ?>><a class="button_link" href="#">CONTACT</a></li>
 			</ul>
 		</div>
