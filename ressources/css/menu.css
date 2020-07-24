@@ -22,9 +22,7 @@ body {
 .menu_button_container{
     visibility: hidden;
     position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: left;
+    left: -500px;
 }
 .menu-btn {
     z-index: 3;
@@ -158,6 +156,13 @@ body {
 }
 /* PAGE */
 @media screen and (max-width: 560px){
+    .menu_button_container{
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+    }
     .menu_button_container{
         visibility: visible;
     }
