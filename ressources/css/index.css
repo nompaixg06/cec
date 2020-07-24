@@ -20,6 +20,7 @@ body {
 
 
 .menu_button_container{
+    visibility: hidden;
     position: absolute;
     width: 100%;
     display: flex;
@@ -157,6 +158,9 @@ body {
 }
 /* PAGE */
 @media screen and (max-width: 560px){
+    .menu_button_container{
+        visibility: visible;
+    }
     #header {
         overflow-x: hidden;
     }
