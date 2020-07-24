@@ -1,0 +1,212 @@
+/*desktop:   1200px;
+laptop:    992px;
+tablet:    768px;
+phone: 560px;*/
+
+body { 
+    background-color: #262626;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*  HEADER  */
+
+
+
+
+
+
+
+
+
+.menu_button_container{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.menu-btn {
+    z-index: 3;
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    text-align: right;
+    right: 0px;
+    margin-left: 10px;
+    align-items: center;
+    width: 3.5em;
+    height: 25%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /* border: 3px solid #fff; */
+  }
+  .menu-btn__burger {
+    margin-right: 5px;
+    position: relative;
+    align-self: center;
+    width: 35px;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 5px;
+    background: #fff;
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-10px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(10px);
+  }
+  /* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header_container {
+    padding: 1.5em 0 1.5em 0;
+    text-align: center;
+    
+}
+.hidden_logo{
+    position: absolute;
+    visibility: hidden;
+    width: 6em;
+    -webkit-filter: drop-shadow(2px 2px 4px #000000);
+}
+.hidden_logo_container{
+    width: 100%;
+}
+.logo{
+    width: 6em;
+    -webkit-filter: drop-shadow(2px 2px 4px #000000);
+    align-self: center;
+}
+.nav_container{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 7em);
+    grid-column-gap: 0;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.nav_buttons{
+    position: relative;
+    color: white;
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px #000000;
+}
+.nav_items {
+    list-style-type: none;
+}
+.button_link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 0.5em;
+    border-radius: 20px;
+    padding: 0.5vh 1vh 0.5vh 1vh;
+}
+
+.button_link:hover{
+    background-color: rgba(255, 255, 255, 0.10);
+    transition: 200ms;
+}
+.nav_buttons:hover{
+    transform: scale(1.05);
+    transition: 200ms;
+}
+.active{
+    color: #6CB9FF;
+}
+/* PAGE */
+@media screen and (max-width: 560px){
+    #header {
+        overflow-x: hidden;
+    }
+    .nav_and_logo_container{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .hidden_logo {
+        visibility: visible;
+        position: relative;
+
+    }
+    .nav_container{
+        position: absolute;
+        top: 0px;
+        background-color: hsla(0, 0%, 100%, 0.2);
+        width: 70%;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        transition: all .5s ease-in-out;
+        transform-origin: center left;
+        left: 0;
+        transform: translate3d(-500px, 0, 0);
+        border-bottom-right-radius: 20px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        overflow-x: hidden;
+    }
+    .nav_container.open{
+        transform: translate3d(0, 0, 0);
+        transition: all .5s ease-in-out;
+        backdrop-filter: blur(10px);
+    }
+    .menu-btn {
+        position: relative;
+        visibility: visible;
+    }
+    .nav_logo {
+        order: -1;
+    }
+    .logo{
+        position: absolute;
+        visibility: hidden;
+    }
+    .nav_buttons {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+    .nav_container {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(auto-fill, auto-fill)
+    }
+}
